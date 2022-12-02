@@ -6,12 +6,12 @@
 #include "radio.h"
 #include "station.h"
 
-
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
     Radio master;
+
     // Station* channels[3] {};
     // channels[0] = new Station(&master, 90, "Rock and Roll");
     // channels[1] = new Station(&master, 101, "Jazz");
