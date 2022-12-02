@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
     QCoreApplication a(argc, argv);
 
     short radiation_max {118};
-    qInfo() << "Double" << radiation_max;
+    qInfo() << "Max: " << radiation_max;
 
 # if 0
     char radiation = radiation_max; // uncontrolled cast
