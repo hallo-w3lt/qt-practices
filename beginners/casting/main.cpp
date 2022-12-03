@@ -11,12 +11,17 @@ int main(int argc, char *argv[])
 
 # if 0
     char radiation = radiation_max; // uncontrolled cast
-    qInfo() << "Radiation: " << radiation; // implict casting (insecure)
+    qInfo() << "Radiation: " << radiation; // implict casting
+# endif
+
+# if 0
+    int radiation {(int)radiation_max}; // controlled casting
+    qInfo() << "Radiation: " << radiation; // explicit casting style-c
 # endif
 
 # if 1
-    int radiation {(int)radiation_max}; // controlled casting
-    qInfo() << "Radiation: " << radiation; // explicit casting (secure)
+    int radiation {static_cast<int>(radiation_max)}; // controlled casting (secure)
+    qInfo() << "Radiation: " << radiation; // explicit casting
 # endif
 
 
